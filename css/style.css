@@ -1,0 +1,843 @@
+:root {
+    --primary: #fd6017;
+    --secondary: #FDBE33;
+    --light: #f4f6f8c5;
+    --dark: #040F28;
+}
+
+/* Modal general */
+.modal-content {
+    background: var(--dark);
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px #00000033;
+}
+
+.modal-title {
+    color: var(--light);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body h5 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.modal-body p, .modal-body ul {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body ul li {
+    margin-bottom: 8px;
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-header .btn-close {
+    background-color: var(--primary);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal-body .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Servicio */
+
+
+.img-responsive {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto; /* La altura se ajustará proporcionalmente */
+}
+
+
+
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+.service-text {
+    padding: 20px;
+    background: white;
+    z-index: 1;
+}
+
+.service-text h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.service-text p {
+    color: #6c757d;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+}
+
+.overlay-content h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.overlay-content .btn {
+    background-color: var(--primary);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Botones personalizados */
+.custom-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.custom-btn:focus {
+    outline: none;
+}
+
+/* Estilo del Texto Superpuesto */
+.service-text {
+    padding: 15px;
+    color: #333;
+    border-top: 4px solid #ff6600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.service-text h4 {
+    color: #333;
+    font-weight: 600;
+}
+
+.service-text p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Sección de Reseñas */
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-dark .text-primary {
+    color: #ff6600;
+}
+
+.bg-light {
+    background: #f8f9fa;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.bg-light:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Sección de Reseñas */
+.bg-light p.fw-normal {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.bg-light h5 {
+    font-weight: 600;
+}
+
+.bg-light span {
+    color: #666;
+}
+
+/* Botones de Redes Sociales */
+a.btn {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a.btn:hover {
+    color: #ff6600;
+    transform: translateY(-2px);
+}
+
+/* Detalles de Diseño para Textos */
+.text-uppercase {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.display-5.text-uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.text-primary {
+    color: #ff6600 !important;
+}
+
+/* Sección Servicios */
+.img-fluid {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+    filter: brightness(1.1);
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.img-fluid {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(7, 6, 6);
+    background-color: var(--primary);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+}
+
+.btn:active {
+    background-color: var(--primary);
+}
+
+/* Footer */
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    max-height: 80px;
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+
+.footer-logo-image {
+    max-width: 450px;
+    max-height: 450px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .footer-logo-container {
+        max-height: 60px;
+    }
+
+    .footer-logo-image {
+        max-width: 100px;
+        max-height: 50px;
+    }
+}
+
+/* Logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.logo-image {
+    max-width: 300px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 0px;
+    opacity: 0.2;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    display: none;
+    left: 50%;
+    bottom: 0;
+    margin-left: -22px;
+    border-radius: 0;
+    z-index: 99;
+}
+
+.bg-dark-radial {
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-size: 3px 3px;
+}
+
+.bg-light-radial {
+    background-image: repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-size: 3px 3px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    padding: 35px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--light);
+    transition: .5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(4, 15, 40, .7);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.page-header-services {
+    height: 250px;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(4, 15, 40, 0.5), rgba(4, 15, 40, 0.5)), url('../img/header-background.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-header-services:hover {
+    background: linear-gradient(rgba(4, 15, 40, 0.3), rgba(4, 15, 40, 0.3)), url('../img/header-background.jpg') center center no-repeat;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-services h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page-header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(4, 15, 40, .7), rgba(4, 15, 40, .7)), url('../img/carousel-1.png') center center no-repeat;
+    background-size: cover;
+}
+
+.service-item .service-icon {
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.service-item .service-icon i {
+    transition: .2s;
+}
+
+.service-item:hover .service-icon i {
+    font-size: 60px;
+}
+
+.portfolio-item {
+    margin-bottom: 60px;
+}
+
+.portfolio-title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    padding: 0 30px;
+    right: 30px;
+    left: 30px;
+    bottom: -60px;
+    background: #FFFFFF;
+    z-index: 3;
+}
+
+.portfolio-btn {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    font-size: 120px;
+    line-height: 0;
+    transition: .1s;
+    transition-delay: .3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+}
+
+.portfolio-box::before,
+.portfolio-box::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    transition: .5s;
+    z-index: 1;
+    background: rgba(4, 15, 40, .7);
+}
+
+.portfolio-box::before {
+    left: 0;
+}
+
+.portfolio-box::after {
+    right: 0;
+}
+
+.portfolio-item:hover .portfolio-box::before {
+    left: 0;
+    width: 50%;
+}
+
+.portfolio-item:hover .portfolio-box::after {
+    right: 0;
+    width: 50%;
+}
+
+@media (min-width: 992px) {
+    .testimonial,
+    .contact-form {
+        margin-left: -90px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        background: var(--primary)
+    }
+}
+
+.footer-shape::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: -40px;
+    background: var(--primary);
+    transform: skew(40deg);
+}
+
+/* Media Queries para mantener la responsividad en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .logo-container {
+        max-height: 60px;
+    }
+
+    .logo-image {
+        max-width: 120px;
+    }
+}
+
+/* Hover en imágenes de servicio */
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay en servicios */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.overlay .btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.main-content {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Estilos para los videos */
+.row.g-0 {
+    margin-bottom: 30px;
+}
+
+.position-relative {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.bg-light {
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-light h4 {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.container-fluid.py-6 {
+    padding: 40px 20px;
+}
+
+/* Botones grandes y uniformes en el carrusel */
+.carousel-btn {
+    padding: 25px 60px;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 20px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        padding: 20px 50px;
+        font-size: 20px;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-btn {
+        padding: 18px 45px;
+        font-size: 18px;
+        margin: 12px 0;
+    }
+}
+
+.category-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+.service-hover {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center; /* Centrar el texto */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.service-hover img {
+    transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Suavizar bordes */
+}
+
+.service-hover:hover img {
+    transform: scale(1.05); /* Aumentar ligeramente la escala */
+    opacity: 0.85; /* Añadir un efecto de opacidad suave */
+}
+
+/* Oscurecimiento sutil en el hover */
+.service-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurecer un poco para mayor contraste */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.service-hover:hover::before {
+    opacity: 1; /* Aparecer el overlay al hacer hover */
+}
+
+/* Nombre de la máquina siempre visible y centrado */
+.service-hover h4 {
+    z-index: 2;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.4s ease-in-out;
+    margin-top: 15px; /* Espacio superior */
+}
+
+.service-hover:hover h4 {
+    color: #fff; /* Cambiar el color al hacer hover */
+}
+
+/* Descripción de la máquina, solo visible en hover */
+.service-hover p {
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    color: #080808;
+    margin: 10px 0 0; /* Pequeño margen superior para separación */
+    max-width: 80%; /* Limitar ancho para un mejor diseño */
+}
+
+.service-hover:hover p {
+    opacity: 1;
+    margin-top: 15px; /* Añadir margen al aparecer */
+}
+
+/* Botón centrado, visible solo en hover */
+.service-hover .btn {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.service-hover:hover .btn {
+    opacity: 1;
+    margin-top: 30px; /* Subir el botón suavemente al hacer hover */
+}
+
+/* Animación de los modales para detalles */
+.modal-content {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.5s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Aparece desde un tamaño más pequeño */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hover effect for images to stay crisp */
+.service-hover img {
+    filter: grayscale(0%); /* Full color by default */
+    transition: all 0.4s ease;
+}
+
+.service-hover:hover img {
+    filter: grayscale(30%); /* Slightly reduce colors on hover */
+    transform: scale(1.05);
+}
+
+/* Added padding for better layout in cards */
+.service-hover {
+    padding: 20px 15px;
+}
